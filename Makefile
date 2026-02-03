@@ -698,10 +698,10 @@ KBUILD_AFLAGS   += -O3 -march=armv8.2-a+lse+crypto+dotprod
 KBUILD_LDFLAGS  += -O3 --plugin-opt=O3
 #KBUILD_LDFLAGS  += -mllvm -regalloc-enable-advisor=release
 #KBUILD_LDFLAGS  += -mllvm -enable-ml-inliner=release
-else
-KBUILD_CFLAGS   += -O2
-KBUILD_AFLAGS   += -O2
-KBUILD_LDFLAGS  += -O2
+#else
+#KBUILD_CFLAGS   += -O2
+#KBUILD_AFLAGS   += -O2
+#KBUILD_LDFLAGS  += -O2
 
 KBUILD_CFLAGS	+= $(call cc-option,-fno-delete-null-pointer-checks,)
 KBUILD_CFLAGS	+= $(call cc-disable-warning,frame-address,)
